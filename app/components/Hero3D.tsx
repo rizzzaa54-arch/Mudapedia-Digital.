@@ -17,7 +17,7 @@ function GlobeScene() {
     }
     if (coinsRef.current) {
       coinsRef.current.rotation.y = -(t * 0.15);
-      coinsRef.current.position.y = Math.sin(t) * 0.2; 
+     coinsRef.current.position.y = Math.sin(t) * 0.2; 
     }
   });
 
@@ -91,8 +91,7 @@ function GlobeScene() {
 
 export default function Hero3D() {
   return (
-    <div className="absolute inset-0 w-full h-full">
-      {/* Kamera dimundurkan ke z: 11 dan FOV diperbesar ke 50 agar area pandang lebih luas */}
+    <div className="absolute inset-0 w-full h-full pointer-events-none">
       <Canvas camera={{ position: [0, -0.2, 11], fov: 50 }}>
         <OrbitControls enableZoom={false} enablePan={false} autoRotate={false} />
         <GlobeScene />

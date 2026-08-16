@@ -8,7 +8,12 @@ import Image from "next/image";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = ["Beranda", "Tentang Kami", "Layanan", "Tim Kami", "Galeri", "Kontak"];
+  // Perhatikan penambahan tanda pagar (#) di depan href agar cocok dengan id di page.tsx
+  const navLinks = [
+    { name: "Tentang Kami", href: "#about" }, 
+    { name: "Galery", href: "#galeri" },     
+    { name: "Harga", href: "#harga" },       
+  ];
 
   return (
     <motion.nav 
@@ -34,11 +39,8 @@ export default function Navbar() {
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center gap-8 text-sm text-gray-300">
         {navLinks.map((link, i) => (
-          <a key={i} href={`#${link.toLowerCase()}`} className="hover:text-white transition-colors relative group">
-            {link}
-            {link === "Beranda" && (
-              <span className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 to-purple-500" />
-            )}
+          <a key={i} href={link.href} className="hover:text-white transition-colors relative group">
+            {link.name}
           </a>
         ))}
       </div>
@@ -56,8 +58,13 @@ export default function Navbar() {
           className="absolute top-[100%] left-0 right-0 p-4 bg-[#0a0524] border-b border-white/10 md:hidden flex flex-col gap-4"
         >
           {navLinks.map((link, i) => (
-            <a key={i} href="#" className="text-gray-300 hover:text-white px-4 py-2 bg-white/5 rounded-lg">
-              {link}
+            <a 
+              key={i} 
+              href={link.href} 
+              onClick={() => setIsOpen(false)} // Menutup menu otomatis saat diklik
+              className="text-gray-300 hover:text-white px-4 py-2 bg-white/5 rounded-lg"
+            >
+              {link.name}
             </a>
           ))}
         </motion.div>

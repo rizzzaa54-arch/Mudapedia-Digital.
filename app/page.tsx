@@ -6,6 +6,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Keunggulan from "./components/Keunggulan";
 import PaketToken from "./components/PaketToken";
+import FAQ from "./components/FAQ"; 
+import AboutTeamSection from "./components/AboutTeamSection"; 
+import Footer from "./components/Footer"; 
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
@@ -25,8 +28,22 @@ export default function Home() {
           >
             <Navbar />
             <Hero />
-            <Keunggulan />
-            <PaketToken />
+            <Keunggulan /> 
+
+            <div id="harga">
+              <PaketToken />
+            </div>
+
+            {/* id diubah dari "Tentang kami" menjadi "about" */}
+            <div id="about">
+              <AboutTeamSection /> 
+            </div>
+            
+            <div id="galeri">
+              <FAQ />
+            </div>
+
+            <Footer /> 
           </motion.div>
         )}
       </AnimatePresence>
