@@ -21,22 +21,13 @@ export default function Footer() {
       <div className="container max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-center mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-start mb-16">
           
-          {/* Kolom 1: Logo, Tagline, Jam Operasional, & Social Media */}
+          {/* Kolom 1: Tagline, Jam Operasional, & Social Media */}
           <div className="lg:col-span-4 flex flex-col items-start">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 flex items-center justify-center">
-                <img 
-                  src="mudapedia-logo.png" 
-                  alt="Logo Perusahaan" 
-                  className="w-full h-full object-contain rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.6)]" 
-               />
-             </div>
-              <h2 className="text-lg font-bold tracking-wide text-white leading-tight">
-                Mudapedia Digital Indonesia
-              </h2>
-            </div>
+            <h2 className="text-base md:text-lg font-bold tracking-wide text-white leading-snug mb-3 min-h-[3.5rem] flex items-center">
+              Mudapedia Digital Indonesia
+            </h2>
 
             <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-4">
               Mari ciptakan obsesi baru dengan diri kita!
@@ -59,7 +50,9 @@ export default function Footer() {
 
           {/* Kolom 2: Galeri & Kontak/Alamat */}
           <div className="lg:col-span-4">
-            <h3 className="font-bold text-sm md:text-base text-white mb-3">Galeri</h3>
+            <h3 className="text-base md:text-lg font-bold text-white mb-3 min-h-[3.5rem] flex items-center">
+              Galeri
+            </h3>
             <div className="space-y-1 text-xs md:text-sm text-gray-300 mb-4">
               <p>Telepon : 0851-1983-6002</p>
               <p>
@@ -77,17 +70,18 @@ export default function Footer() {
 
           {/* Kolom 3: Perusahaan */}
           <div className="lg:col-span-2">
-            <h3 className="font-bold text-sm md:text-base text-white mb-3">Perusahaan</h3>
+            <h3 className="text-base md:text-lg font-bold text-white mb-3 min-h-[3.5rem] flex items-center">
+              Perusahaan
+            </h3>
             <ul className="space-y-2 text-xs md:text-sm text-gray-400">
               <li><a href="#" className="hover:text-blue-400 transition">Tentang Kami</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Tim Kami</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Harga</a></li>
               <li><a href="#" className="hover:text-blue-400 transition">Galeri</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition">Harga</a></li>
             </ul>
           </div>
 
           {/* Kolom 4: Custom Animated Logo Container */}
-          <div className="lg:col-span-2 flex justify-center lg:justify-end items-center">
+          <div className="lg:col-span-2 flex justify-center lg:justify-end items-center pt-4 lg:pt-0">
             <div className="relative w-40 h-40 md:w-48 md:h-48 flex items-center justify-center group">
               
               <div className="absolute inset-0 rounded-full border border-dashed border-cyan-400/50 animate-[spin_12s_linear_infinite]" />

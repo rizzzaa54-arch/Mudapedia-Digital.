@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, Loader2 } from "lucide-react";
-import Package3D from "./Package3D";
 
 const networkPackages: Record<string, Array<{ name: string; desc: string; price: string; popular: boolean; color: string; features: string[] }>> = {
   solana: [
@@ -423,10 +422,6 @@ export default function PaketToken() {
                     )}
 
                     <div className="flex-grow">
-                      <div className="mb-2">
-                        <Package3D color={pkg.color} />
-                      </div>
-
                       <div className="text-center mb-6">
                         <h3 className="text-xl font-bold tracking-wider text-white mb-1">
                           {pkg.name}

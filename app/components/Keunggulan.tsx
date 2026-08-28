@@ -73,7 +73,7 @@ export default function Keunggulan() {
         >
           {/* Judul */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Kenapa Memilih Mudapedia?
+            Mengapa Mudapedia?
           </h2>
 
           {/* Subjudul */}
