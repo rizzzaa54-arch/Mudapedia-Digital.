@@ -8,16 +8,11 @@ import * as THREE from "three";
 
 function GlobeScene() {
   const groupRef = useRef<THREE.Group>(null);
-  const coinsRef = useRef<THREE.Group>(null);
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
     if (groupRef.current) {
       groupRef.current.rotation.y = t * 0.1;
-    }
-    if (coinsRef.current) {
-      coinsRef.current.rotation.y = -(t * 0.15);
-     coinsRef.current.position.y = Math.sin(t) * 0.2; 
     }
   });
 
@@ -34,9 +29,9 @@ function GlobeScene() {
         </Sphere>
         <Sphere args={[2.1, 34, 34]}>
           <meshStandardMaterial color="#0a0524" />
-        </Sphere>
+        </Sphere> 
         
-        {/* Logo Pengganti Huruf M */}
+        {/* Logo Mudapedia di Tengah */}
         <Html center transform distanceFactor={5}>
           <div className="relative w-28 h-28 flex items-center justify-center select-none pointer-events-none drop-shadow-[0_0_25px_rgba(59,130,246,0.9)]">
             <Image 
@@ -47,28 +42,6 @@ function GlobeScene() {
               className="w-full h-full object-contain"
               priority
             />
-          </div>
-        </Html>
-      </group>
-
-      {/* Orbiting Coins & Elements */}
-      <group ref={coinsRef}>
-        {/* Bitcoin */}
-        <Html position={[2.2, 1.0, 0]} center transform distanceFactor={4}>
-          <div className="flex items-center justify-center w-14 h-14 rounded-full border-2 border-purple-500 bg-purple-900/40 backdrop-blur-md shadow-[0_0_15px_#a855f7] select-none pointer-events-none">
-            <span className="text-2xl font-bold text-white">₿</span>
-          </div>
-        </Html>
-        {/* Solana */}
-        <Html position={[-2.2, -0.6, 1]} center transform distanceFactor={4}>
-          <div className="flex items-center justify-center w-14 h-14 rounded-full border-2 border-blue-500 bg-blue-900/40 backdrop-blur-md shadow-[0_0_15px_#3b82f6] select-none pointer-events-none">
-             <span className="text-2xl font-bold text-white">≡</span>
-          </div>
-        </Html>
-        {/* Ethereum */}
-        <Html position={[1.2, -1.5, 1.5]} center transform distanceFactor={4}>
-          <div className="flex items-center justify-center w-14 h-14 rounded-full border-2 border-purple-400 bg-purple-900/40 backdrop-blur-md shadow-[0_0_15px_#a855f7] select-none pointer-events-none">
-             <span className="text-2xl font-bold text-white">♦</span>
           </div>
         </Html>
       </group>
@@ -93,7 +66,8 @@ export default function Hero3D() {
   return (
     <div className="absolute inset-0 w-full h-full pointer-events-none">
       <Canvas camera={{ position: [0, -0.2, 11], fov: 50 }}>
-        <OrbitControls enableZoom={false} enablePan={false} autoRotate={false} />
+        {/* Mengatur enable={false} agar globe tidak bisa digerakkan manual dan tidak memblokir scroll mobile */}
+        <OrbitControls enabled={false} />
         <GlobeScene />
       </Canvas>
     </div>

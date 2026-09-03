@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, HelpCircle, ChevronDown } from "lucide-react";
+import { HelpCircle, ChevronDown } from "lucide-react";
 
 const faqData = [
   {
@@ -11,7 +11,14 @@ const faqData = [
   },
   {
     question: "Layanan apa saja yang ditawarkan?",
-    answer: ""
+    answer: (
+      <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm md:text-base">
+        <li><strong>Pengembangan Aplikasi Mobile:</strong> Android & iOS (native atau cross-platform).</li>
+        <li><strong>Pengembangan Website:</strong> E-commerce, company profile, portofolio, dan lainnya.</li>
+        <li><strong>Digital Marketing:</strong> SEO, SEM, Social Media Management, hingga Content Creation.</li>
+        <li><strong>Konsultasi Digital:</strong> Analisis kebutuhan & strategi digitalisasi bisnis.</li>
+      </ul>
+    )
   },
   {
     question: "Bagaimana cara kerja sama dengan PT Mudapedia?",
@@ -28,79 +35,41 @@ const faqData = [
 ];
 
 export default function FAQ() {
-  const scrollRef = useRef<HTMLDivElement>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
-      const offset = direction === "left" ? -clientWidth / 2 : clientWidth / 2;
-      scrollRef.current.scrollTo({ left: scrollLeft + offset, behavior: "smooth" });
-    }
-  };
 
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section id="faq" className="relative py-28 px-6 md:px-12 bg-[#030014] text-white overflow-hidden">
-      
-      {/* Background Glow Effects Biru */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[150px] pointer-events-none rounded-full" />
+    <section id="faq" className="relative py-28 px-6 md:px-12 bg-black text-white overflow-hidden">
       
       <div className="container max-w-7xl mx-auto relative z-10">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold tracking-wider uppercase mb-4 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
-              <HelpCircle className="w-4 h-4" />
-              Pusat Bantuan Interaktif
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight">
-              Pertanyaan yang Sering <span className="text-blue-500">Diajukan</span>
-            </h2>
+        <div className="mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black border border-neutral-800 text-blue-400 text-xs font-semibold tracking-wider uppercase mb-4">
+            <HelpCircle className="w-4 h-4" />
+            Pusat Bantuan Interaktif
           </div>
-
-          {/* Tombol Navigasi Geser (Kiri & Kanan) */}
-          <div className="flex items-center gap-3">
-            <button 
-              onClick={() => scroll("left")}
-              className="w-12 h-12 rounded-full bg-[#0a0524]/80 border border-blue-500/30 flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white hover:border-transparent transition-all shadow-[0_0_15px_rgba(59,130,246,0.3)] cursor-pointer active:scale-95"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button 
-              onClick={() => scroll("right")}
-              className="w-12 h-12 rounded-full bg-[#0a0524]/80 border border-blue-500/30 flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white hover:border-transparent transition-all shadow-[0_0_15px_rgba(59,130,246,0.3)] cursor-pointer active:scale-95"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight">
+            Pertanyaan yang Sering <span className="text-blue-500">Diajukan</span>
+          </h2>
         </div>
 
-        {/* Container Kartu Geser (Horizontal Scroll) */}
-        <div 
-          ref={scrollRef}
-          className="flex gap-6 overflow-x-auto scrollbar-none pb-6 pt-2 snap-x snap-mandatory scroll-smooth"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
+        {/* Container Kartu Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {faqData.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="min-w-[300px] md:min-w-[380px] max-w-[380px] snap-start flex-shrink-0 bg-[#08031d]/90 border border-blue-500/30 hover:border-blue-400 rounded-3xl p-8 flex flex-col justify-between backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300 group"
+                className="bg-black border border-neutral-800 hover:border-blue-500 rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 group"
               >
                 <div>
                   {/* Nomor Urut Kartu */}
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                    <div className="w-8 h-8 rounded-full bg-black border border-neutral-800 flex items-center justify-center text-blue-400">
                       <HelpCircle className="w-4 h-4" />
                     </div>
                   </div>
@@ -113,7 +82,7 @@ export default function FAQ() {
                     <h3 className="text-xl font-bold text-white mb-2 leading-snug">
                       {faq.question}
                     </h3>
-                    <div className={`w-7 h-7 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 transition-transform duration-300 flex-shrink-0 mt-1 ${isOpen ? "rotate-180 bg-blue-600 text-white" : ""}`}>
+                    <div className={`w-7 h-7 rounded-full bg-black border border-neutral-800 flex items-center justify-center text-blue-400 transition-transform duration-300 flex-shrink-0 mt-1 ${isOpen ? "rotate-180 border-blue-500 text-white" : ""}`}>
                       <ChevronDown className="w-4 h-4" />
                     </div>
                   </button>
@@ -128,14 +97,20 @@ export default function FAQ() {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <p className="text-gray-300 text-sm md:text-base leading-relaxed pt-4 mt-2 border-t border-blue-500/20">
-                          {faq.answer}
-                        </p>
+                        <div className="pt-4 mt-2 border-t border-neutral-800">
+                          {typeof faq.answer === "string" ? (
+                            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                              {faq.answer}
+                            </p>
+                          ) : (
+                            faq.answer
+                          )}
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>

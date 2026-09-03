@@ -34,7 +34,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen pt-24 pb-12 overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-screen pt-24 pb-12 overflow-hidden flex items-center justify-center bg-black">
       
       {/* Latar Belakang Bintang Bergerak / Berkedip Halus */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -62,10 +62,6 @@ export default function Hero() {
           />
         ))}
       </div>
-
-      {/* Background glow effects */}
-      <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none z-0" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[120px] pointer-events-none z-0" />
 
       {/* Kontainer Utama */}
       <div className="container max-w-7xl mx-auto px-6 md:px-12 relative z-10 grid lg:grid-cols-2 gap-16 items-center">

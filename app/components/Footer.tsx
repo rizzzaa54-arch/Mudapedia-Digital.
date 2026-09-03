@@ -2,21 +2,21 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#030014] text-white pt-24 pb-8 overflow-hidden border-t border-blue-900/40">
+    <footer className="relative bg-black text-white pt-24 pb-8 overflow-hidden border-t border-neutral-900">
       
-      {/* 3D Futuristic Background Effects */}
+      {/* 3D Futuristic Background Effects (Dipertahankan tanpa diubah) */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none mix-blend-screen"
         style={{ backgroundImage: "url('/footer-bg.png')" }}
       />
-      {/* Neon Glow Orbs */}
+      {/* Neon Glow Orbs (Dipertahankan tanpa diubah) */}
       <div className="absolute -top-24 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-10 w-80 h-80 bg-purple-600/15 rounded-full blur-[100px] pointer-events-none" />
       
-      {/* Grid Pattern Overlay for 3D Cyber Look */}
+      {/* Grid Pattern Overlay for 3D Cyber Look (Dipertahankan tanpa diubah) */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293d15_1px,transparent_1px),linear-gradient(to_bottom,#1f293d15_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-[#030014]/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
 
       <div className="container max-w-7xl mx-auto px-6 relative z-10">
         
@@ -80,7 +80,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Kolom 4: Custom Animated Logo Container */}
+          {/* Kolom 4: Custom Animated Logo Container (Animasi 3D Tetap Utuh) */}
           <div className="lg:col-span-2 flex justify-center lg:justify-end items-center pt-4 lg:pt-0">
             <div className="relative w-40 h-40 md:w-48 md:h-48 flex items-center justify-center group">
               

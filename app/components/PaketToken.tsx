@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Check, Loader2 } from "lucide-react";
+import { Check } from "lucide-react";
 
 const networkPackages: Record<string, Array<{ name: string; desc: string; price: string; popular: boolean; color: string; features: string[] }>> = {
   solana: [
@@ -304,36 +304,50 @@ const networks = [
   { id: "sui", name: "Sui", icon: "💧" },
 ];
 
+const sponsors = [
+  { name: "Official Pavo", img: "/logopavo.png" },
+  { name: "Nagapara", img: "/nagapara-logo.png" },
+  { name: "Gaswin Artha Suar", img: "/gaswin-logo.png" },
+  { name: "Digital Blockchain Indonesia", img: "/digitalblockchain-logo.png" },
+];
+
 export default function PaketToken() {
   const [activeNetwork, setActiveNetwork] = useState("solana");
-  const [loadingIndex, setLoadingIndex] = useState<number | null>(null);
-  const [successIndex, setSuccessIndex] = useState<number | null>(null);
 
   const currentPackages = networkPackages[activeNetwork] || networkPackages.solana;
 
-  const handlePilihPaket = (index: number, namaPaket: string, hargaPaket: string) => {
-    setLoadingIndex(index);
-
-    setTimeout(() => {
-      setLoadingIndex(null);
-      setSuccessIndex(index);
-
-      setTimeout(() => {
-        setSuccessIndex(null);
-        const selectedNet = networks.find((n) => n.id === activeNetwork);
-        alert(`Berhasil Memilih!\n- Jaringan: ${selectedNet?.name}\n- Paket: ${namaPaket}\n- Harga: ${hargaPaket}`);
-      }, 500);
-    }, 1000);
-  };
-
   return (
-    <section id="paket-token" className="relative py-28 px-4 md:px-12 bg-[#030014] text-white overflow-hidden">
-      
-      {/* Background Glow Biru Solid */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px] bg-blue-600/10 blur-[160px] pointer-events-none rounded-full" />
+    <section id="paket-token" className="relative py-28 px-4 md:px-12 bg-black text-white overflow-hidden">
 
       <div className="container max-w-7xl mx-auto relative z-10 flex flex-col items-center">
         
+        {/* Infinite Scrolling Sponsor Ticker Bar dengan Gambar Logo Lokal */}
+        <div className="w-full overflow-hidden py-4 border-y border-neutral-900 bg-neutral-950/60 backdrop-blur-md mb-14 relative">
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+
+          <motion.div 
+            className="flex gap-16 whitespace-nowrap items-center w-max"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+          >
+            {[...sponsors, ...sponsors, ...sponsors].map((sponsor, sIdx) => (
+              <div key={sIdx} className="flex items-center gap-3 px-4 opacity-90">
+                <div className="w-7 h-7 relative flex items-center justify-center">
+                  <img 
+                    src={sponsor.img} 
+                    alt={sponsor.name} 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <span className="text-sm md:text-base font-semibold tracking-wider text-white">
+                  {sponsor.name}
+                </span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
         {/* Header Section */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -345,7 +359,7 @@ export default function PaketToken() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-3">
             Paket Token
           </h2>
-          <p className="text-gray-400 text-sm md:text-base max-w-xl leading-relaxed">
+          <p className="text-gray-300 text-base md:text-lg max-w-xl leading-relaxed">
             Pilih paket terbaik untuk membangun token Anda di jaringan blockchain pilihan.
           </p>
         </motion.div>
@@ -361,7 +375,7 @@ export default function PaketToken() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-3 flex flex-col gap-3.5"
+              className="lg:col-span-3 flex flex-col gap-4"
             >
               {networks.map((net) => {
                 const isActive = activeNetwork === net.id;
@@ -369,23 +383,16 @@ export default function PaketToken() {
                   <button
                     key={net.id}
                     onClick={() => setActiveNetwork(net.id)}
-                    className={`relative flex items-center gap-4 px-5 py-4 rounded-2xl border transition-all duration-300 text-left group cursor-pointer ${
+                    className={`relative flex items-center gap-4 px-6 py-4 rounded-2xl text-left cursor-pointer transition-none ${
                       isActive 
-                        ? "bg-blue-600/20 border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.4)]" 
-                        : "bg-[#08031d]/60 border-white/5 hover:border-blue-500/30 hover:bg-[#0a0524]"
+                        ? "bg-neutral-900 border border-neutral-700 text-gray-300" 
+                        : "bg-blue-600 border border-blue-600 text-white"
                     }`}
                   >
-                    <span className="text-xl">{net.icon}</span>
-                    <span className={`font-medium tracking-wide ${isActive ? "text-white font-semibold" : "text-gray-400 group-hover:text-gray-200"}`}>
+                    <span className="text-2xl">{net.icon}</span>
+                    <span className={`text-base md:text-lg font-semibold tracking-wide ${isActive ? "text-gray-300" : "text-white"}`}>
                       {net.name}
                     </span>
-                    {isActive && (
-                      <motion.div 
-                        layoutId="activeIndicator"
-                        className="absolute inset-0 rounded-2xl border border-blue-400 pointer-events-none"
-                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                      />
-                    )}
                   </button>
                 );
               })}
@@ -394,28 +401,20 @@ export default function PaketToken() {
             {/* Right: 3 Package Cards */}
             <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
               {currentPackages.map((pkg, idx) => {
-                const isLoading = loadingIndex === idx;
-                const isSuccess = successIndex === idx;
+                const uniqueKey = `${activeNetwork}-${idx}`;
 
                 return (
-                  <motion.div 
-                    key={`${activeNetwork}-${idx}`}
-                    initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ 
-                      duration: 0.4, 
-                      delay: idx * 0.15, 
-                      ease: [0.16, 1, 0.3, 1] 
-                    }}
-                    className={`relative rounded-3xl p-8 flex flex-col justify-between backdrop-blur-xl transition-all duration-300 w-full ${
+                  <div 
+                    key={uniqueKey}
+                    className={`relative rounded-3xl p-8 flex flex-col justify-between w-full transition-none ${
                       pkg.popular 
-                        ? "bg-[#08031d]/95 border-2 border-blue-500 shadow-[0_0_35px_rgba(59,130,246,0.35)] md:-translate-y-2" 
-                        : "bg-[#08031d]/80 border border-blue-500/20 hover:border-blue-400/50 shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+                        ? "bg-neutral-900 border-2 border-blue-600 md:-translate-y-2 shadow-xl" 
+                        : "bg-black border border-blue-600"
                     }`}
                   >
                     {pkg.popular && (
                       <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20">
-                        <span className="px-4 py-1 rounded-full text-[10px] font-bold tracking-widest text-white bg-blue-600 shadow-[0_0_15px_rgba(59,130,246,0.8)] uppercase">
+                        <span className="px-4 py-1 rounded-full text-xs font-bold tracking-widest text-white bg-blue-600 uppercase">
                           POPULAR
                         </span>
                       </div>
@@ -423,75 +422,40 @@ export default function PaketToken() {
 
                     <div className="flex-grow">
                       <div className="text-center mb-6">
-                        <h3 className="text-xl font-bold tracking-wider text-white mb-1">
+                        <h3 className="text-2xl font-bold tracking-wider text-white mb-2">
                           {pkg.name}
                         </h3>
-                        <p className="text-gray-400 text-xs mb-3">
+                        <p className="text-gray-300 text-sm mb-4">
                           {pkg.desc}
                         </p>
-                        <div className="text-xl md:text-2xl font-extrabold text-blue-400">
+                        <div className="text-2xl md:text-3xl font-extrabold text-white">
                           {pkg.price}
                         </div>
-                        <span className="text-[11px] text-gray-500">/proyek</span>
+                        <span className="text-xs text-gray-400">/proyek</span>
                       </div>
 
-                      <ul className="space-y-3 mb-8">
+                      <ul className="space-y-3.5 mb-8">
                         {pkg.features.map((feat, fIdx) => (
-                          <motion.li 
+                          <li 
                             key={fIdx}
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.3, delay: (idx * 0.15) + (fIdx * 0.05) }}
-                            className="flex items-start gap-3 text-xs text-gray-300"
+                            className="flex items-start gap-3 text-sm md:text-base text-gray-200 font-medium"
                           >
-                            <span className="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-blue-500/20 border border-blue-400/40 flex items-center justify-center text-blue-400">
-                              <Check className="w-2.5 h-2.5" />
+                            <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-neutral-800 border border-neutral-700 flex items-center justify-center text-white">
+                              <Check className="w-3.5 h-3.5" />
                             </span>
                             <span className="leading-snug">{feat}</span>
-                          </motion.li>
+                          </li>
                         ))}
                       </ul>
                     </div>
 
-                    <motion.button 
-                      onClick={() => handlePilihPaket(idx, pkg.name, pkg.price)}
-                      disabled={isLoading || isSuccess}
-                      whileTap={{ scale: 0.95 }}
-                      className={`relative overflow-hidden w-full py-3.5 rounded-full text-sm font-bold transition-all duration-300 border cursor-pointer flex items-center justify-center gap-2 ${
-                        isSuccess
-                          ? "bg-emerald-600 text-white border-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.5)]"
-                          : pkg.popular
-                          ? "bg-blue-600 text-white border-transparent hover:bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.5)]"
-                          : "bg-blue-500/10 text-blue-300 border-blue-500/30 hover:bg-blue-600 hover:text-white hover:border-transparent"
-                      }`}
+                    <button 
+                      type="button"
+                      className="relative overflow-hidden w-full py-4 rounded-full text-base font-bold border border-blue-600 bg-blue-600 text-white cursor-pointer flex items-center justify-center gap-2 transition-none"
                     >
-                      {!isLoading && !isSuccess && (
-                        <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
-                      )}
-
-                      {isLoading && (
-                        <>
-                          <Loader2 className="w-4 h-4 animate-spin text-white" />
-                          <span>Menghubungkan...</span>
-                        </>
-                      )}
-
-                      {isSuccess && (
-                        <>
-                          <motion.div
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                          >
-                            <Check className="w-4 h-4 text-white" />
-                          </motion.div>
-                          <span>Berhasil Dipilih!</span>
-                        </>
-                      )}
-
-                      {!isLoading && !isSuccess && "Beli Paket"}
-                    </motion.button>
-                  </motion.div>
+                      Beli Paket
+                    </button>
+                  </div>
                 );
               })}
             </div>

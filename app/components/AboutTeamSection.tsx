@@ -110,10 +110,7 @@ export default function AboutTeamSection() {
   });
 
   return (
-    <section className="relative bg-[#030014] text-white py-24 px-6 overflow-hidden">
-      
-      {/* Background Glow Effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
+    <section className="relative bg-black text-white py-24 px-6 overflow-hidden">
 
       <div className="container max-w-7xl mx-auto relative z-10">
         
@@ -121,10 +118,10 @@ export default function AboutTeamSection() {
         <div className="flex justify-center items-center gap-4 mb-16">
           <button
             onClick={() => setActiveTab('about')}
-            className={`px-8 py-3 rounded-full text-sm font-bold tracking-wider transition-all duration-300 shadow-lg ${
+            className={`px-8 py-3 rounded-full text-sm font-bold tracking-wider transition-all duration-300 bg-black border text-white ${
               activeTab === 'about'
-                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-[0_0_20px_rgba(59,130,246,0.5)] scale-105'
-                : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/10'
+                ? 'border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.3)] scale-105'
+                : 'border-white/10 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]'
             }`}
           >
             Tentang Kami
@@ -132,10 +129,10 @@ export default function AboutTeamSection() {
 
           <button
             onClick={() => setActiveTab('team')}
-            className={`px-8 py-3 rounded-full text-sm font-bold tracking-wider transition-all duration-300 shadow-lg ${
+            className={`px-8 py-3 rounded-full text-sm font-bold tracking-wider transition-all duration-300 bg-black border text-white ${
               activeTab === 'team'
-                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-[0_0_20px_rgba(59,130,246,0.5)] scale-105'
-                : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/10'
+                ? 'border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.3)] scale-105'
+                : 'border-white/10 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]'
             }`}
           >
             Tim Kami
@@ -158,7 +155,7 @@ export default function AboutTeamSection() {
             
             {/* Animasi Visual Diagram Grafik Tren Naik di Sebelah Kiri */}
             <div className="lg:col-span-6 flex justify-center">
-              <div className="w-full max-w-lg rounded-3xl overflow-hidden border border-blue-500/30 shadow-[0_0_40px_rgba(59,130,246,0.25)] bg-gradient-to-br from-blue-950/60 via-[#0a0624] to-[#030014] p-6 relative group">
+              <div className="w-full max-w-lg rounded-3xl overflow-hidden border border-neutral-800 bg-black p-6 relative group">
                 
                 {/* Header Kartu Statistik */}
                 <div className="flex justify-between items-center mb-6">
@@ -208,12 +205,12 @@ export default function AboutTeamSection() {
                 </div>
 
                 {/* Footer Keterangan Statistik */}
-                <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-blue-900/30">
-                  <div className="bg-white/5 p-3 rounded-2xl border border-white/5">
+                <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-neutral-800">
+                  <div className="bg-black p-3 rounded-2xl border border-neutral-800">
                     <span className="text-gray-400 text-xs block">Peningkatan Klien</span>
                     <span className="text-cyan-400 font-bold text-base">+185%</span>
                   </div>
-                  <div className="bg-white/5 p-3 rounded-2xl border border-white/5">
+                  <div className="bg-black p-3 rounded-2xl border border-neutral-800">
                     <span className="text-gray-400 text-xs block">Solusi Digital</span>
                     <span className="text-blue-400 font-bold text-base">Terdepan</span>
                   </div>
@@ -239,7 +236,7 @@ export default function AboutTeamSection() {
           </div>
         </div>
 
-        {/* ================= BAGIAN 2: TIM KAMI (TIDAK DIUBAH) ================= */}
+        {/* ================= BAGIAN 2: TIM KAMI ================= */}
         <div 
           className={`transition-all duration-700 transform ${
             activeTab === 'team' 
@@ -258,30 +255,30 @@ export default function AboutTeamSection() {
           <div className="flex justify-center items-center gap-3 mb-10">
             <button
               onClick={() => setTeamFilter('all')}
-              className={`px-6 py-2 rounded-full text-xs font-bold transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full text-xs font-bold transition-all duration-300 bg-black border text-white ${
                 teamFilter === 'all'
-                  ? 'bg-indigo-950 text-cyan-400 border border-blue-500/50 shadow-[0_0_15px_rgba(59,130,246,0.3)]'
-                  : 'bg-white/5 text-gray-400 hover:text-white border border-white/10'
+                  ? 'border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.3)]'
+                  : 'border-white/10 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]'
               }`}
             >
               Semua
             </button>
             <button
               onClick={() => setTeamFilter('team')}
-              className={`px-6 py-2 rounded-full text-xs font-bold transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full text-xs font-bold transition-all duration-300 bg-black border text-white ${
                 teamFilter === 'team'
-                  ? 'bg-indigo-950 text-cyan-400 border border-blue-500/50 shadow-[0_0_15px_rgba(59,130,246,0.3)]'
-                  : 'bg-white/5 text-gray-400 hover:text-white border border-white/10'
+                  ? 'border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.3)]'
+                  : 'border-white/10 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]'
               }`}
             >
               Tim
             </button>
             <button
               onClick={() => setTeamFilter('intern')}
-              className={`px-6 py-2 rounded-full text-xs font-bold transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full text-xs font-bold transition-all duration-300 bg-black border text-white ${
                 teamFilter === 'intern'
-                  ? 'bg-indigo-950 text-cyan-400 border border-blue-500/50 shadow-[0_0_15px_rgba(59,130,246,0.3)]'
-                  : 'bg-white/5 text-gray-400 hover:text-white border border-white/10'
+                  ? 'border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.3)]'
+                  : 'border-white/10 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]'
               }`}
             >
               Magang
@@ -294,14 +291,17 @@ export default function AboutTeamSection() {
               {filteredMembers.map((member, index) => (
                 <div 
                   key={index}
-                  className="w-[260px] sm:w-[275px] shrink-0 snap-start group relative bg-gradient-to-b from-blue-950/40 via-[#0a0624] to-[#030014] border border-blue-900/40 rounded-[2.5rem] pt-6 px-0 pb-0 flex flex-col items-center text-center overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.6)] hover:border-cyan-500/50 transition-all duration-500 hover:-translate-y-2"
+                  className="w-[260px] sm:w-[275px] shrink-0 snap-start group relative bg-black border border-neutral-800 rounded-[2.5rem] pt-6 px-0 pb-0 flex flex-col items-center text-center overflow-hidden shadow-lg hover:border-blue-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-500 hover:-translate-y-2"
                   style={{
                     animation: activeTab === 'team' ? `fadeInUp 0.6s ease forwards ${index * 0.1}s` : 'none',
                   }}
                 >
+                  {/* Kotak Dark Grey khusus untuk bagian Nama dan Role */}
                   <div className="px-6 w-full">
-                    <h4 className="font-bold text-base md:text-lg text-white mb-1">{member.name}</h4>
-                    <p className="text-xs text-gray-400 mb-4">{member.role}</p>
+                    <div className="bg-neutral-900 border border-neutral-800 py-3 px-4 rounded-2xl mb-4 shadow-inner">
+                      <h4 className="font-bold text-base md:text-lg text-white mb-1">{member.name}</h4>
+                      <p className="text-xs text-gray-400">{member.role}</p>
+                    </div>
 
                     {/* Hanya Ikon Instagram Saja dengan Link Unik */}
                     <div className="flex items-center justify-center mb-6">
@@ -309,7 +309,7 @@ export default function AboutTeamSection() {
                         href={member.instagramUrl} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="w-8 h-8 rounded-full bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-cyan-400 hover:bg-blue-600 hover:text-white transition"
+                        className="w-8 h-8 rounded-full bg-black border border-neutral-700 flex items-center justify-center text-white hover:border-blue-500 hover:shadow-[0_0_10px_rgba(59,130,246,0.5)] transition"
                       >
                         <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
                           <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.4 5.6 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.6 18.4 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
