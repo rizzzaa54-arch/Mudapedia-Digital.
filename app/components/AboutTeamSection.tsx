@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 export default function AboutTeamSection() {
   const [activeTab, setActiveTab] = useState<'about' | 'team'>('about');
-  const [teamFilter, setTeamFilter] = useState<'all' | 'team' | 'intern'>('all');
+  const [teamFilter, setTeamFilter] = useState<'all' | 'team' | 'intern' | 'alumni'>('all');
 
   const teamMembers = [
     // Tim 
@@ -101,11 +101,21 @@ export default function AboutTeamSection() {
       img: '/intern11.png',
       instagramUrl: 'https://instagram.com/username_peserta11' 
     },
+
+    // Contoh Alumni (Silakan sesuaikan nama, foto, dan link-nya)
+    { 
+      name: 'Alumni 1', 
+      role: 'Former Developer', 
+      category: 'alumni', 
+      img: '/intern1.png',
+      instagramUrl: 'https://instagram.com/username_alumni1' 
+    },
   ];
 
   const filteredMembers = teamMembers.filter((member) => {
     if (teamFilter === 'team') return member.category === 'team';
     if (teamFilter === 'intern') return member.category === 'intern';
+    if (teamFilter === 'alumni') return member.category === 'alumni';
     return true;
   });
 
@@ -252,7 +262,8 @@ export default function AboutTeamSection() {
             </p>
           </div>
 
-          <div className="flex justify-center items-center gap-3 mb-10">
+          {/* Tombol Filter Kategori (Termasuk Alumni) */}
+          <div className="flex flex-wrap justify-center items-center gap-3 mb-10">
             <button
               onClick={() => setTeamFilter('all')}
               className={`px-6 py-2 rounded-full text-xs font-bold transition-all duration-300 bg-black border text-white ${
@@ -282,6 +293,16 @@ export default function AboutTeamSection() {
               }`}
             >
               Magang
+            </button>
+            <button
+              onClick={() => setTeamFilter('alumni')}
+              className={`px-6 py-2 rounded-full text-xs font-bold transition-all duration-300 bg-black border text-white ${
+                teamFilter === 'alumni'
+                  ? 'border-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.3)]'
+                  : 'border-white/10 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]'
+              }`}
+            >
+              Alumni
             </button>
           </div>
 
