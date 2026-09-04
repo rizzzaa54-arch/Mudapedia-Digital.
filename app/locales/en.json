@@ -1,0 +1,429 @@
+{
+  "navbar": {
+    "market": "Market",
+    "about": "About Us",
+    "team": "Team",
+    "listing": "Listing",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "titleLine1": "Speed in the Web3",
+    "titleLine2": " Blockchain, and Crypto Industry.",
+    "description": "We are a startup at the heart of Web3, blockchain, and crypto, where technology and creativity merge. Our team builds innovative solutions that help businesses thrive in the decentralized world."
+  },
+  "keunggulan": {
+    "title": "Why",
+    "highlight": " Mudapedia?",
+    "subtitle": "We deliver Web3 and Blockchain-based digital solutions with future-proof technology standards.",
+    "items": [
+      {
+        "title": "Cutting-Edge Tech",
+        "description": "Using the latest secure and scalable Blockchain & Web3 technologies."
+      },
+      {
+        "title": "Safe & Reliable",
+        "description": "Multi-layered security systems with verified smart contracts."
+      },
+      {
+        "title": "Optimal Performance",
+        "description": "Fast, stable infrastructure ready for long-term growth."
+      },
+      {
+        "title": "Custom Solutions",
+        "description": "Services tailored to your specific project and business needs."
+      },
+      {
+        "title": "24/7 Support",
+        "description": "Professional team ready to assist you anytime and anywhere."
+      }
+    ]
+  },
+  "paket": {
+    "title": "Token Packages",
+    "subtitle": "Choose the best package to build your token on your preferred blockchain network.",
+    "perProject": "/project",
+    "buyButton": "Buy Package",
+    "popular": "POPULAR",
+    "networks": {
+      "solana": "Solana",
+      "ethereum": "Ethereum",
+      "bnb": "BNB Chain",
+      "tron": "Tron",
+      "sui": "Sui"
+    },
+    "solana": [
+      {
+        "name": "Basic Package",
+        "desc": "Essential features for basic token creation.",
+        "price": "Rp 35.500.000",
+        "popular": false,
+        "features": [
+          "Token creation on SOLANA network",
+          "1 Million Coin Supply",
+          "Add Liquidity Rp 900.000",
+          "Social Media (X/Twitter)",
+          "Telegram (5 members)",
+          "Website + Free 1 Year Domain",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges"
+        ]
+      },
+      {
+        "name": "Standard Package",
+        "desc": "Essential features for standard token creation.",
+        "price": "Rp 70.000.000",
+        "popular": true,
+        "features": [
+          "Token creation on SOLANA network",
+          "5 Million Coin Supply",
+          "Add Liquidity Rp 1.500.000",
+          "Social Media (X/Twitter)",
+          "Telegram (50 members)",
+          "Website + Free 1 Year Domain",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges",
+          "First 2 promotional posts"
+        ]
+      },
+      {
+        "name": "Advanced Package",
+        "desc": "Essential features for advanced token creation.",
+        "price": "Rp 120.000.000",
+        "popular": false,
+        "features": [
+          "Token creation on SOLANA network",
+          "10 Million Coin Supply",
+          "Add Liquidity Rp 5.000.000",
+          "Social Media (X/Twitter, Telegram 100 members)",
+          "Website + Free 1 Year Domain",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges",
+          "First 10 promotional posts",
+          "Exclusive listing on Garuda Exchanger and other exchanges"
+        ]
+      }
+    ],
+    "sui": [
+      {
+        "name": "Basic Package",
+        "desc": "Essential features for basic token creation.",
+        "price": "Rp 26.000.000",
+        "popular": false,
+        "features": [
+          "Token creation on SUI network",
+          "1 Million Coin Supply",
+          "Add Liquidity Rp 500.000 USD",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges"
+        ]
+      },
+      {
+        "name": "Standard Package",
+        "desc": "Essential features for standard token creation.",
+        "price": "Rp 35.000.000",
+        "popular": true,
+        "features": [
+          "Token creation on SUI network",
+          "5 Million Coin Supply",
+          "Add Liquidity Rp 1.500.000 USD",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges",
+          "First 3 promotional posts"
+        ]
+      },
+      {
+        "name": "Advanced Package",
+        "desc": "Essential features for advanced token creation.",
+        "price": "Rp 80.000.000",
+        "popular": false,
+        "features": [
+          "Token creation on SUI network",
+          "10 Million Coin Supply",
+          "Add Liquidity Rp 2.000.000",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges",
+          "First 10 promotional posts",
+          "Exclusive listing on NusaDex and other exchanges",
+          "Verified X Social Media",
+          "Custom Supply Request",
+          "50 Wallet Holders"
+        ]
+      }
+    ],
+    "ethereum": [
+      {
+        "name": "Basic Package",
+        "desc": "Essential features for basic token creation.",
+        "price": "Rp 222.000.000",
+        "popular": false,
+        "features": [
+          "Token creation on ETHEREUM network",
+          "1 Million Coin Supply",
+          "Add Liquidity Rp 3.000.000",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges"
+        ]
+      },
+      {
+        "name": "Standard Package",
+        "desc": "Essential features for standard token creation.",
+        "price": "Rp 650.000.000",
+        "popular": true,
+        "features": [
+          "Token creation on ETHEREUM network",
+          "5 Million Coin Supply",
+          "Add Liquidity Rp 10.000.000",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges",
+          "First 3 promotional posts"
+        ]
+      },
+      {
+        "name": "Advanced Package",
+        "desc": "Essential features for advanced token creation.",
+        "price": "Rp 1.300.000.000",
+        "popular": false,
+        "features": [
+          "Token creation on ETHEREUM network",
+          "10 Million Coin Supply",
+          "Add Liquidity Rp 15.000.000 USD",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges",
+          "First 10 promotional posts",
+          "Exclusive listing on NusaDex and other exchanges",
+          "Verified X Social Media",
+          "Custom Supply Request",
+          "50 Wallet Holders"
+        ]
+      }
+    ],
+    "bnb": [
+      {
+        "name": "Basic Package",
+        "desc": "Essential features for basic token creation.",
+        "price": "Rp 80.000.000",
+        "popular": false,
+        "features": [
+          "Token creation on BNB network",
+          "1 Million Coin Supply",
+          "Add Liquidity Rp 2.000.000",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges"
+        ]
+      },
+      {
+        "name": "Standard Package",
+        "desc": "Essential features for standard token creation.",
+        "price": "Rp 160.000.000",
+        "popular": true,
+        "features": [
+          "Token creation on BNB network",
+          "5 Million Coin Supply",
+          "Add Liquidity Rp 5.000.000",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges",
+          "First 3 promotional posts"
+        ]
+      },
+      {
+        "name": "Advanced Package",
+        "desc": "Essential features for advanced token creation.",
+        "price": "Rp 222.000.000",
+        "popular": false,
+        "features": [
+          "Token creation on BNB network",
+          "10 Million Coin Supply",
+          "Add Liquidity Rp 100.000.000",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges",
+          "First 10 promotional posts",
+          "Exclusive listing on NusaDex and other exchanges",
+          "Verified X Social Media",
+          "Custom Supply Request",
+          "50 Wallet Holders"
+        ]
+      }
+    ],
+    "tron": [
+      {
+        "name": "Basic Package",
+        "desc": "Essential features for basic token creation.",
+        "price": "Rp 71.000.000",
+        "popular": false,
+        "features": [
+          "Token creation on TRON network",
+          "1 Million Coin Supply",
+          "Add Liquidity Rp 3.000.000",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges"
+        ]
+      },
+      {
+        "name": "Standard Package",
+        "desc": "Essential features for standard token creation.",
+        "price": "Rp 125.000.000",
+        "popular": true,
+        "features": [
+          "Token creation on TRON network",
+          "5 Million Coin Supply",
+          "Add Liquidity Rp 5.000.000",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges",
+          "First 3 promotional posts"
+        ]
+      },
+      {
+        "name": "Advanced Package",
+        "desc": "Essential features for advanced token creation.",
+        "price": "Rp 169.000.000",
+        "popular": false,
+        "features": [
+          "Token creation on TRON network",
+          "10 Million Coin Supply",
+          "Add Liquidity Rp 11.000.000",
+          "Social Media (X/Twitter, Telegram, and Instagram)",
+          "Website + Free 1 Year Domain",
+          "Manual Book",
+          "Whitepaper & Roadmap",
+          "Listing on Garuda Exchanger & Other Exchanges",
+          "First 10 promotional posts",
+          "Exclusive listing on NusaDex and other exchanges",
+          "Verified X Social Media"
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "badge": "Portfolio & Documentation",
+    "title": "Project",
+    "highlight": " Gallery",
+    "subtitle": "Explore the various technology projects, Web3 platforms, and digital ecosystems we have built alongside our clients.",
+    "items": [
+      {
+        "title": "DEX & Crypto Exchange Ecosystem",
+        "category": "Blockchain & Web3",
+        "desc": "Development of decentralized exchange platforms featuring high security and optimal liquidity."
+      },
+      {
+        "title": "Digital Asset Tokenization Platform",
+        "category": "Smart Contract",
+        "desc": "Custom token creation and management solutions across major blockchain networks."
+      },
+      {
+        "title": "Blockchain Analytics Dashboard",
+        "category": "Web App & Analytics",
+        "desc": "Real-time transaction monitoring interface featuring interactive chart data visualizations."
+      },
+      {
+        "title": "Multi-Chain Crypto Wallet",
+        "category": "Mobile App",
+        "desc": "Secure digital wallet application for storing and transferring multi-network crypto assets."
+      },
+      {
+        "title": "Enterprise Web3 Solutions",
+        "category": "Enterprise Solution",
+        "desc": "Corporate blockchain infrastructure integration for business automation and transparency."
+      },
+      {
+        "title": "Global Community & Ecosystem",
+        "category": "Community Platform",
+        "desc": "Development of token-based community engagement and management platforms."
+      }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "perfBadge": "Business Performance",
+    "perfTitle": "Growth Chart & Future Digital Era Trends",
+    "clientInc": "Client Increase",
+    "clientIncVal": "+185%",
+    "digitalSol": "Digital Solutions",
+    "digitalSolVal": "Leading",
+    "visionTitle": "Vision",
+    "visionDesc": "To be a leading Digital Agency company in helping business owners grow their enterprises.",
+    "missionTitle": "Mission",
+    "missionDesc": "Understanding that the digital era has opened doors to limitless opportunities, we are here as a smart and trusted solution to help you grow your business in a constantly changing world. As an innovative company, we offer a range of services specifically designed to meet modern business needs."
+  },
+  "faq": {
+    "badge": "Interactive Help Center",
+    "title": "Frequently Asked ",
+    "titleHighlight": "Questions",
+    "items": [
+      {
+        "question": "What is PT Mudapedia Digital Indonesia?",
+        "answer": "PT Mudapedia Digital Indonesia is a company engaged in technology development and digitalization. We provide innovative solutions for businesses and individuals, ranging from app development, websites, to digital marketing strategies."
+      },
+      {
+        "question": "What services are offered?",
+        "answerList": [
+          "Mobile App Development: Android & iOS (native or cross-platform).",
+          "Website Development: E-commerce, company profile, portfolio, and more.",
+          "Digital Marketing: SEO, SEM, Social Media Management, to Content Creation.",
+          "Digital Consulting: Needs analysis & business digitalization strategy."
+        ]
+      },
+      {
+        "question": "How to cooperate with PT Mudapedia?",
+        "answer": "The cooperation process begins with an initial consultation to understand your needs. Our team then prepares a solution proposal complete with cost and timeline estimates. Once agreed upon, development begins with intensive communication and transparency at every stage of the project."
+      },
+      {
+        "question": "Who can use Mudapedia's services?",
+        "answer": "Our services are open to various types of clients, ranging from SMEs, medium-sized enterprises, to large corporations. We also serve individual needs looking to develop digital products."
+      },
+      {
+        "question": "How to contact PT Mudapedia Digital Indonesia?",
+        "answer": "You can contact us via email, phone, or the contact form on our official website. Our team is ready to help you find the best solution for your business needs."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Let's create a new obsession with ourselves!",
+    "days": "Monday – Friday",
+    "hours": "08:00 – 16:00 WIB",
+    "galleryTitle": "Gallery",
+    "phone": "Phone",
+    "email": "Email",
+    "city": "Banyuwangi",
+    "address": "Perum Gedong Blok. D No.5\nKertosari, Kec. Banyuwangi, Kabupaten\nBanyuwangi, Jawa Timur 68418",
+    "companyTitle": "Company",
+    "links": {
+      "about": "About Us",
+      "gallery": "Gallery",
+      "pricing": "Pricing"
+    },
+    "rights": "© 2026 MudaPedia. All rights reserved."
+  }
+}

@@ -8,11 +8,19 @@ import * as THREE from "three";
 
 function GlobeScene() {
   const groupRef = useRef<THREE.Group>(null);
+  const logoGroupRef = useRef<THREE.Group>(null);
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
+    
+    // Bola berputar dengan kecepatan normal (0.1)
     if (groupRef.current) {
       groupRef.current.rotation.y = t * 0.1;
+    }
+
+    // Logo berputar dengan kecepatan berbeda (0.06) agar tercipta efek dinamis
+    if (logoGroupRef.current) {
+      logoGroupRef.current.rotation.y = t * 0.06;
     }
   });
 
@@ -22,7 +30,7 @@ function GlobeScene() {
       <pointLight position={[10, 10, 10]} color="#3b82f6" intensity={2.5} />
       <pointLight position={[-10, -10, -10]} color="#8b5cf6" intensity={2.5} />
 
-      {/* Center Globe */}
+      {/* Center Globe (Bola Utama) */}
       <group ref={groupRef}>
         <Sphere args={[2.2, 34, 34]}>
           <meshStandardMaterial color="#3b82f6" wireframe transparent opacity={0.3} />
@@ -30,16 +38,18 @@ function GlobeScene() {
         <Sphere args={[2.1, 34, 34]}>
           <meshStandardMaterial color="#0a0524" />
         </Sphere> 
-        
-        {/* Logo Mudapedia di Tengah */}
-        <Html center transform distanceFactor={5}>
-          <div className="relative w-28 h-28 flex items-center justify-center select-none pointer-events-none drop-shadow-[0_0_25px_rgba(59,130,246,0.9)]">
+      </group>
+
+      {/* Group Khusus Logo yang Berputar dengan Kecepatan Berbeda di dalam Bola */}
+      <group ref={logoGroupRef}>
+        <Html center transform distanceFactor={5} position={[0, 0, 0]}>
+          <div className="absolute -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-56 md:h-56 flex items-center justify-center select-none pointer-events-none drop-shadow-[0_0_35px_rgba(59,130,246,0.9)]">
             <Image 
               src="/mudapedia-logo.png" 
               alt="Logo Tengah Globe"
-              width={100}
-              height={100}
-              className="w-full h-full object-contain"
+              width={180}
+              height={180}
+              className="w-full h-full object-contain translate-x-3"
               priority
             />
           </div>
@@ -64,10 +74,12 @@ function GlobeScene() {
 
 export default function Hero3D() {
   return (
-    <div className="absolute inset-0 w-full h-full pointer-events-none">
-      <Canvas camera={{ position: [0, -0.2, 11], fov: 50 }}>
-        {/* Mengatur enable={false} agar globe tidak bisa digerakkan manual dan tidak memblokir scroll mobile */}
-        <OrbitControls enabled={false} />
+    <div className="absolute inset-0 w-full h-full pointer-events-none" style={{ touchAction: "none" }}>
+      <Canvas 
+        camera={{ position: [0, -0.2, 11], fov: 50 }}
+        style={{ pointerEvents: "none" }}
+      >
+        <OrbitControls enabled={false} enableZoom={false} enableRotate={false} />
         <GlobeScene />
       </Canvas>
     </div>

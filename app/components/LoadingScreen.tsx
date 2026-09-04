@@ -9,25 +9,18 @@ interface LoadingScreenProps {
 }
 
 export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
-  const [progress, setProgress] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setTimeout(() => {
-            setIsExiting(true);
-            setTimeout(onComplete, 900);
-          }, 300);
-          return 100;
-        }
-        return prev + 2.5;
-      });
-    }, 35);
+    // Timer otomatis untuk durasi loading screen (misalnya 2.5 detik)
+    const timer = setTimeout(() => {
+      setIsExiting(true);
+      setTimeout(() => {
+        onComplete();
+      }, 900); // Waktu transisi keluar
+    }, 2500);
 
-    return () => clearInterval(interval);
+    return () => clearTimeout(timer);
   }, [onComplete]);
 
   return (
@@ -36,49 +29,47 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         <motion.div
           className="fixed inset-0 z-50 flex items-center justify-center bg-[#030014] text-white overflow-hidden"
           initial={{ opacity: 1 }}
-          exit={{ scale: 3, opacity: 0, filter: "blur(20px)" }}
+          exit={{ 
+            opacity: 0, 
+            scale: 2.5, 
+            filter: "blur(20px)" 
+          }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Latar Belakang Portal Glow */}
-          <div className="absolute w-[500px] h-[500px] bg-gradient-to-tr from-blue-600/20 to-purple-600/20 rounded-full blur-[140px] pointer-events-none animate-pulse" />
+          {/* Latar Belakang Cahaya Biru Tunggal (Clean & HD Glow) */}
+          <div className="absolute w-[450px] h-[450px] bg-blue-600/25 rounded-full blur-[130px] pointer-events-none animate-pulse" />
 
-          <div className="relative z-10 flex flex-col items-center justify-center text-center">
+          {/* Kontainer Logo dan Teks */}
+          <motion.div 
+            className="relative z-10 flex flex-col items-center justify-center text-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             
-            {/* Cincin Portal Berputar di Luar Logo */}
-            <div className="relative w-40 h-40 flex items-center justify-center mb-6">
-              <motion.div 
-                className="absolute inset-0 rounded-full border-2 border-dashed border-cyan-500/40"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            {/* Logo HD Tanpa Pembungkus Cincin */}
+            <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center mb-4 drop-shadow-[0_0_35px_rgba(37,99,235,0.8)]">
+              <Image 
+                src="/mudapedia-logo.png" 
+                alt="Logo Mudapedia"
+                width={150}
+                height={150}
+                className="w-full h-full object-contain"
+                priority
               />
-              <motion.div 
-                className="absolute inset-2 rounded-full border border-purple-500/30"
-                animate={{ rotate: -360 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              />
-
-              {/* Logo di Tengah Portal */}
-              <div className="relative w-24 h-24 flex items-center justify-center drop-shadow-[0_0_20px_rgba(59,130,246,0.8)]">
-                <Image 
-                  src="/mudapedia-logo.png" 
-                  alt="Logo Mudapedia"
-                  width={90}
-                  height={90}
-                  className="w-full h-full object-contain"
-                  priority
-                />
-              </div>
             </div>
 
-            {/* Teks Persentase Portal */}
-            <div className="text-2xl md:text-3xl font-bold tracking-widest text-cyan-400 font-mono mb-2">
-              {Math.floor(progress)}%
-            </div>
-            <p className="text-gray-400 text-xs tracking-widest uppercase">
+            {/* Nama Perusahaan Berwarna Biru */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-lg md:text-xl font-bold tracking-[0.2em] uppercase text-blue-500 drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]"
+            >
               Mudapedia Digital
-            </p>
+            </motion.div>
 
-          </div>
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>

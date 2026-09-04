@@ -1,0 +1,429 @@
+{
+  "navbar": {
+    "market": "Market",
+    "about": "Tentang Kami",
+    "team": "Tim",
+    "listing": "Listing",
+    "contact": "Hubungi Kami"
+  },
+  "hero": {
+    "titleLine1": "Kecepatan dalam Industri Web3",
+    "titleLine2": " Blockchain, dan Kripto.",
+    "description": "Kami adalah perusahaan rintisan yang berada di jantung Web3, blockchain, dan kripto, tempat teknologi dan kreativitas berpadu. Tim kami membangun solusi inovatif yang membantu bisnis berkembang di dunia desentralisasi."
+  },
+  "keunggulan": {
+    "title": "Mengapa",
+    "highlight": " Mudapedia?",
+    "subtitle": "Kami menghadirkan solusi digital berbasis Web3 dan Blockchain dengan standar teknologi masa depan.",
+    "items": [
+      {
+        "title": "Teknologi Terdepan",
+        "description": "Menggunakan teknologi Blockchain & Web3 terbaru yang aman dan scalable."
+      },
+      {
+        "title": "Aman & Terpercaya",
+        "description": "Sistem keamanan berlapis dengan smart contract yang terverifikasi."
+      },
+      {
+        "title": "Performa Optimal",
+        "description": "Infrastruktur cepat, stabil, dan siap untuk pertumbuhan jangka panjang."
+      },
+      {
+        "title": "Solusi Kustom",
+        "description": "Layanan yang disesuaikan dengan kebutuhan proyek dan bisnis Anda."
+      },
+      {
+        "title": "Support 24/7",
+        "description": "Tim profesional siap membantu Anda kapan pun dan dari mana pun."
+      }
+    ]
+  },
+  "paket": {
+    "title": "Paket Token",
+    "subtitle": "Pilih paket terbaik untuk membangun token Anda di jaringan blockchain pilihan.",
+    "perProject": "/proyek",
+    "buyButton": "Beli Paket",
+    "popular": "POPULER",
+    "networks": {
+      "solana": "Solana",
+      "ethereum": "Ethereum",
+      "bnb": "BNB Chain",
+      "tron": "Tron",
+      "sui": "Sui"
+    },
+    "solana": [
+      {
+        "name": "Paket Dasar",
+        "desc": "Fitur penting untuk membuat token dasar.",
+        "price": "Rp 35.500.000",
+        "popular": false,
+        "features": [
+          "Pembuatan token di jaringan SOLANA",
+          "Supply Koin 1 Juta",
+          "Tambahkan Likuiditas Rp 900.000",
+          "Media Sosial (X/Twitter)",
+          "Telegram (5 anggota)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya"
+        ]
+      },
+      {
+        "name": "Paket Standar",
+        "desc": "Fitur penting untuk membuat token standar.",
+        "price": "Rp 70.000.000",
+        "popular": true,
+        "features": [
+          "Pembuatan token di jaringan SOLANA",
+          "Supply Koin 5 Juta",
+          "Tambahkan Likuiditas Rp 1.500.000",
+          "Media Sosial (X/Twitter)",
+          "Telegram (50 anggota)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya",
+          "2 postingan pertama untuk promosi"
+        ]
+      },
+      {
+        "name": "Paket Lanjutan",
+        "desc": "Fitur penting untuk membuat token canggih.",
+        "price": "Rp 120.000.000",
+        "popular": false,
+        "features": [
+          "Pembuatan token di jaringan SOLANA",
+          "Supply Koin 10 Juta",
+          "Tambahkan Likuiditas Rp 5.000.000",
+          "Media Sosial (X/Twitter, Telegram 100 anggota)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya",
+          "10 postingan pertama untuk promosi",
+          "Pencatatan eksklusif di Garuda Exchanger dan Bursa lainnya"
+        ]
+      }
+    ],
+    "sui": [
+      {
+        "name": "Paket Dasar",
+        "desc": "Fitur penting untuk membuat token dasar.",
+        "price": "Rp 26.000.000",
+        "popular": false,
+        "features": [
+          "Pembuatan token di jaringan SUI",
+          "Supply Koin 1 Juta",
+          "Tambahkan Likuiditas Rp 500.000 USD",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya"
+        ]
+      },
+      {
+        "name": "Paket Standar",
+        "desc": "Fitur penting untuk membuat token standar.",
+        "price": "Rp 35.000.000",
+        "popular": true,
+        "features": [
+          "Pembuatan token di jaringan SUI",
+          "Supply Koin 5 Juta",
+          "Tambahkan Likuiditas Rp 1.500.000 USD",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya",
+          "3 postingan pertama untuk promosi"
+        ]
+      },
+      {
+        "name": "Paket Lanjutan",
+        "desc": "Fitur penting untuk membuat token canggih.",
+        "price": "Rp 80.000.000",
+        "popular": false,
+        "features": [
+          "Pembuatan token di jaringan SUI",
+          "Supply Koin 10 Juta",
+          "Tambahkan Likuiditas Rp 2.000.000",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya",
+          "10 postingan pertama untuk promosi",
+          "Pencatatan eksklusif di NusaDex dan Bursa lainnya",
+          "Media Sosial X Terverifikasi",
+          "Permintaan Supply khusus",
+          "50 Pemegang Dompet"
+        ]
+      }
+    ],
+    "ethereum": [
+      {
+        "name": "Paket Dasar",
+        "desc": "Fitur penting untuk membuat token dasar.",
+        "price": "Rp 222.000.000",
+        "popular": false,
+        "features": [
+          "Pembuatan token di jaringan ETHEREUM",
+          "Supply Koin 1 Juta",
+          "Tambahkan Likuiditas Rp 3.000.000",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya"
+        ]
+      },
+      {
+        "name": "Paket Standar",
+        "desc": "Fitur penting untuk membuat token standar.",
+        "price": "Rp 650.000.000",
+        "popular": true,
+        "features": [
+          "Pembuatan token di jaringan ETHEREUM",
+          "Supply Koin 5 Juta",
+          "Tambahkan Likuiditas Rp 10.000.000",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya",
+          "3 postingan pertama untuk promosi"
+        ]
+      },
+      {
+        "name": "Paket Lanjutan",
+        "desc": "Fitur penting untuk membuat token canggih.",
+        "price": "Rp 1.300.000.000",
+        "popular": false,
+        "features": [
+          "Pembuatan token di jaringan ETHEREUM",
+          "Supply Koin 10 Juta",
+          "Tambahkan Likuiditas Rp 15.000.000 USD",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya",
+          "10 postingan pertama untuk promosi",
+          "Pencatatan eksklusif di NusaDex dan Bursa lainnya",
+          "Media Sosial X Terverifikasi",
+          "Permintaan Supply khusus",
+          "50 Pemegang Dompet"
+        ]
+      }
+    ],
+    "bnb": [
+      {
+        "name": "Paket Dasar",
+        "desc": "Fitur penting untuk membuat token dasar.",
+        "price": "Rp 80.000.000",
+        "popular": false,
+        "features": [
+          "Pembuatan token di jaringan BNB",
+          "Supply Koin 1 Juta",
+          "Tambahkan Likuiditas Rp 2.000.000",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya"
+        ]
+      },
+      {
+        "name": "Paket Standar",
+        "desc": "Fitur penting untuk membuat token standar.",
+        "price": "Rp 160.000.000",
+        "popular": true,
+        "features": [
+          "Pembuatan token di jaringan BNB",
+          "Supply Koin 5 Juta",
+          "Tambahkan Likuiditas Rp 5.000.000",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya",
+          "3 postingan pertama untuk promosi"
+        ]
+      },
+      {
+        "name": "Paket Lanjutan",
+        "desc": "Fitur penting untuk membuat token canggih.",
+        "price": "Rp 222.000.000",
+        "popular": false,
+        "features": [
+          "Pembuatan token di jaringan BNB",
+          "Supply Koin 10 Juta",
+          "Tambahkan Likuiditas Rp 100.000.000",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya",
+          "10 postingan pertama untuk promosi",
+          "Pencatatan eksklusif di NusaDex dan Bursa lainnya",
+          "Media Sosial X Terverifikasi",
+          "Permintaan Supply khusus",
+          "50 Pemegang Dompet"
+        ]
+      }
+    ],
+    "tron": [
+      {
+        "name": "Paket Dasar",
+        "desc": "Fitur penting untuk membuat token dasar.",
+        "price": "Rp 71.000.000",
+        "popular": false,
+        "features": [
+          "Pembuatan token di jaringan TRON",
+          "Supply Koin 1 Juta",
+          "Tambahkan Likuiditas Rp 3.000.000",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya"
+        ]
+      },
+      {
+        "name": "Paket Standar",
+        "desc": "Fitur penting untuk membuat token standar.",
+        "price": "Rp 125.000.000",
+        "popular": true,
+        "features": [
+          "Pembuatan token di jaringan TRON",
+          "Supply Koin 5 Juta",
+          "Tambahkan Likuiditas Rp 5.000.000",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya",
+          "3 postingan pertama untuk promosi"
+        ]
+      },
+      {
+        "name": "Paket Lanjutan",
+        "desc": "Fitur penting untuk membuat token canggih.",
+        "price": "Rp 169.000.000",
+        "popular": false,
+        "features": [
+          "Pembuatan token di jaringan TRON",
+          "Supply Koin 10 Juta",
+          "Tambahkan Likuiditas Rp 11.000.000",
+          "Media Sosial (X/Twitter, Telegram, dan Instagram)",
+          "Situs Web + Domain Gratis 1 Tahun",
+          "Buku Manual",
+          "Buku Putih & Peta Jalan",
+          "Daftar Garuda Exchanger & Bursa Lainnya",
+          "10 postingan pertama untuk promosi",
+          "Pencatatan eksklusif di NusaDex dan Bursa lainnya",
+          "Media Sosial X Terverifikasi"
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "badge": "Portofolio & Dokumentasi",
+    "title": "Galeri",
+    "highlight": " Proyek",
+    "subtitle": "Jelajahi berbagai proyek teknologi, platform Web3, dan ekosistem digital yang telah kami kembangkan bersama para klien.",
+    "items": [
+      {
+        "title": "Ekosistem DEX & Pertukaran Kripto",
+        "category": "Blockchain & Web3",
+        "desc": "Pengembangan platform pertukaran terdesentralisasi dengan keamanan tingkat tinggi dan likuiditas optimal."
+      },
+      {
+        "title": "Platform Tokenisasi Aset Digital",
+        "category": "Smart Contract",
+        "desc": "Solusi pembuatan dan manajemen token kustom di berbagai jaringan blockchain utama."
+      },
+      {
+        "title": "Dashboard Analitik Blockchain",
+        "category": "Web App & Analytics",
+        "desc": "Antarmuka pemantauan transaksi real-time dengan visualisasi data grafik yang interaktif."
+      },
+      {
+        "title": "Dompet Kripto Multi-Chain",
+        "category": "Mobile App",
+        "desc": "Aplikasi dompet digital aman untuk penyimpanan dan transfer aset kripto lintas jaringan."
+      },
+      {
+        "title": "Solusi Enterprise Web3",
+        "category": "Enterprise Solution",
+        "desc": "Integrasi infrastruktur blockchain korporat untuk otomatisasi dan transparansi bisnis."
+      },
+      {
+        "title": "Komunitas & Ekosistem Global",
+        "category": "Community Platform",
+        "desc": "Pengembangan platform engagement dan manajemen komunitas berbasis token."
+      }
+    ]
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "perfBadge": "Performa Bisnis",
+    "perfTitle": "Grafik Pertumbuhan & Tren Era Digital Masa Depan",
+    "clientInc": "Peningkatan Klien",
+    "clientIncVal": "+185%",
+    "digitalSol": "Solusi Digital",
+    "digitalSolVal": "Terdepan",
+    "visionTitle": "Visi",
+    "visionDesc": "Kami menjadi Perusahaan Digital Agency yang terdepan dalam membantu para pebisnis mengembangkan usahanya.",
+    "missionTitle": "Misi",
+    "missionDesc": "Memahami bahwa era digital telah membuka pintu menuju peluang yang tak terbatas, dan kami hadir sebagai solusi yang cerdas dan terpercaya untuk membantu Anda mengembangkan bisnis dalam dunia yang terus berubah. Sebagai perusahaan inovatif, kami menawarkan rangkaian layanan yang dirancang khusus untuk memenuhi kebutuhan bisnis modern."
+  },
+  "faq": {
+    "badge": "Pusat Bantuan Interaktif",
+    "title": "Pertanyaan yang Sering ",
+    "titleHighlight": "Diajukan",
+    "items": [
+      {
+        "question": "Apa itu PT Mudapedia Digital Indonesia?",
+        "answer": "PT Mudapedia Digital Indonesia adalah perusahaan yang bergerak dibidang pengembangan teknologi dan digitalisasi. Kami menyediakan solusi inovatif untuk bisnis maupun individu, mulai dari pengembangan aplikasi, website, hingga strategi digital marketing."
+      },
+      {
+        "question": "Layanan apa saja yang ditawarkan?",
+        "answerList": [
+          "Pengembangan Aplikasi Mobile: Android & iOS (native atau cross-platform).",
+          "Pengembangan Website: E-commerce, company profile, portofolio, dan lainnya.",
+          "Digital Marketing: SEO, SEM, Social Media Management, hingga Content Creation.",
+          "Konsultasi Digital: Analisis kebutuhan & strategi digitalisasi bisnis."
+        ]
+      },
+      {
+        "question": "Bagaimana cara kerja sama dengan PT Mudapedia?",
+        "answer": "Proses kerja sama dimulai dengan konsultasi awal untuk memahami kebutuhan Anda. Tim kami kemudian menyusun proposal solusi lengkap dengan estimasi biaya dan waktu pengerjaan. Setelah ada kesepakatan, pengembangan dimulai dengan komunikasi intensif dan transparansi di setiap tahap proyek."
+      },
+      {
+        "question": "Siapa saja klien yang bisa menggunakan layanan Mudapedia?",
+        "answer": "Layanan kami terbuka untuk berbagai jenis klien, mulai dari UMKM, perusahaan menengah, hingga korporasi besar. Kami juga melayani kebutuhan individu yang ingin mengembangkan produk digital."
+      },
+      {
+        "question": "Bagaimana cara menghubungi PT Mudapedia Digital Indonesia?",
+        "answer": "Anda dapat menghubungi kami melalui email, telepon, atau formular kontak di website resmi. Tim kami siap membantu Anda mendapatkan solusi terbaik sesuai kebutuhan bisnis."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Mari ciptakan obsesi baru dengan diri kita!",
+    "days": "Senin – Jum'at",
+    "hours": "08.00 – 16.00 WIB",
+    "galleryTitle": "Galeri",
+    "phone": "Telepon",
+    "email": "Email",
+    "city": "Banyuwangi",
+    "address": "Perum Gedong Blok. D No.5\nKertosari, Kec. Banyuwangi, Kabupaten\nBanyuwangi, Jawa Timur 68418",
+    "companyTitle": "Perusahaan",
+    "links": {
+      "about": "Tentang Kami",
+      "gallery": "Galeri",
+      "pricing": "Harga"
+    },
+    "rights": "© 2026 MudaPedia. All rights reserved."
+  }
+}

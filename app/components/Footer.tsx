@@ -1,41 +1,35 @@
 import React from 'react';
+import { useLanguage } from '../TranslationContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="relative bg-black text-white pt-24 pb-8 overflow-hidden border-t border-neutral-900">
-      
-      {/* 3D Futuristic Background Effects (Dipertahankan tanpa diubah) */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-30 pointer-events-none mix-blend-screen"
         style={{ backgroundImage: "url('/footer-bg.png')" }}
       />
-      {/* Neon Glow Orbs (Dipertahankan tanpa diubah) */}
       <div className="absolute -top-24 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-10 w-80 h-80 bg-purple-600/15 rounded-full blur-[100px] pointer-events-none" />
-      
-      {/* Grid Pattern Overlay for 3D Cyber Look (Dipertahankan tanpa diubah) */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293d15_1px,transparent_1px),linear-gradient(to_bottom,#1f293d15_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none" />
 
       <div className="container max-w-7xl mx-auto px-6 relative z-10">
-        
-        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-start mb-16">
           
-          {/* Kolom 1: Tagline, Jam Operasional, & Social Media */}
           <div className="lg:col-span-4 flex flex-col items-start">
             <h2 className="text-base md:text-lg font-bold tracking-wide text-white leading-snug mb-3 min-h-[3.5rem] flex items-center">
               Mudapedia Digital Indonesia
             </h2>
 
             <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-4">
-              Mari ciptakan obsesi baru dengan diri kita!
+              {t.footer.tagline}
             </p>
 
             <div className="mb-6 text-xs md:text-sm">
-              <p className="font-bold text-white">Senin – Jum'at</p>
-              <p className="text-gray-400">08.00 – 16.00 WIB</p>
+              <p className="font-bold text-white">{t.footer.days}</p>
+              <p className="text-gray-400">{t.footer.hours}</p>
             </div>
 
             <div className="flex items-center gap-3">
@@ -48,42 +42,36 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Kolom 2: Galeri & Kontak/Alamat */}
           <div className="lg:col-span-4">
             <h3 className="text-base md:text-lg font-bold text-white mb-3 min-h-[3.5rem] flex items-center">
-              Galeri
+              {t.footer.galleryTitle}
             </h3>
             <div className="space-y-1 text-xs md:text-sm text-gray-300 mb-4">
-              <p>Telepon : 0851-1983-6002</p>
+              <p>{t.footer.phone} : 0851-1983-6002</p>
               <p>
-                Email : <a href="mailto:mudapediadigitalindonesia.com" className="text-blue-400 hover:underline">mudapediadigitalindonesia.com</a>
+                {t.footer.email} : <a href="mailto:mudapediadigitalindonesia.com" className="text-blue-400 hover:underline">mudapediadigitalindonesia.com</a>
               </p>
             </div>
 
-            <h4 className="font-bold text-xs md:text-sm text-white mb-1">Banyuwangi</h4>
-            <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
-              Perum Gedong Blok. D No.5<br />
-              Kertosari, Kec. Banyuwangi, Kabupaten<br />
-              Banyuwangi, Jawa Timur 68418
+            <h4 className="font-bold text-xs md:text-sm text-white mb-1">{t.footer.city}</h4>
+            <p className="text-xs md:text-sm text-gray-400 leading-relaxed whitespace-pre-line">
+              {t.footer.address}
             </p>
           </div>
 
-          {/* Kolom 3: Perusahaan */}
           <div className="lg:col-span-2">
             <h3 className="text-base md:text-lg font-bold text-white mb-3 min-h-[3.5rem] flex items-center">
-              Perusahaan
+              {t.footer.companyTitle}
             </h3>
             <ul className="space-y-2 text-xs md:text-sm text-gray-400">
-              <li><a href="#" className="hover:text-blue-400 transition">Tentang Kami</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Galeri</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Harga</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition">{t.footer.links.about}</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition">{t.footer.links.gallery}</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition">{t.footer.links.pricing}</a></li>
             </ul>
           </div>
 
-          {/* Kolom 4: Custom Animated Logo Container (Animasi 3D Tetap Utuh) */}
           <div className="lg:col-span-2 flex justify-center lg:justify-end items-center pt-4 lg:pt-0">
             <div className="relative w-40 h-40 md:w-48 md:h-48 flex items-center justify-center group">
-              
               <div className="absolute inset-0 rounded-full border border-dashed border-cyan-400/50 animate-[spin_12s_linear_infinite]" />
               <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-blue-600/30 to-purple-600/30 blur-md animate-pulse" />
               <div className="absolute inset-4 rounded-full border border-blue-400/30" />
@@ -101,16 +89,14 @@ export default function Footer() {
                     Mudapedia Digital<br />Indonesia
                   </span>
                 </div>
-
               </div>
             </div>
           </div>
 
         </div>
 
-        {/* Bottom Bar: Copyright & Social Icons */}
         <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-sm text-gray-400">
-          <p>© 2026 MudaPedia. All rights reserved.</p>
+          <p>{t.footer.rights}</p>
           
           <div className="flex items-center gap-4">
             <a href="#" className="hover:text-white transition">
